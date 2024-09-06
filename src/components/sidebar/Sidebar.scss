@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -10,10 +11,14 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 400px;
+      width: 300px;
       background: white;
       bottom: 0;
       z-index: 999;
+
+      @include mobile{
+      width: 200px;
+      }
       .links {
         position: absolute;
         width: 100%;
@@ -26,17 +31,20 @@
   
         a {
           font-size: 40px;
+          @include mobile{
+          font-size: 20px;
+            }
         }
       }
     }
   
     button {
-      width: 50px;
-      height: 80px;
-      border-radius: 70%;
+      width: 40px;
+      height:40px;
+      border-radius: 80%;
       position: fixed;
-      top: 25px;
-      left: 25px;
+      top:35px;
+      left:30px;
       background-color: transparent;
       border: none;
       cursor: pointer;

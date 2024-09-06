@@ -32,9 +32,9 @@ const Sidebar = () => {
       variants={variants}  // Added the 'variants' prop
       animate={open ? "open" : "closed"}  // Corrected 'open' state to match the state variable
     >
-      <div className="bg">
+      <motion.div className="bg" variants={variants}>
         <Links />
-      </div>
+      </motion.div>
       <ToggleButton setOpen={setOpen} />
     </motion.div>
   );

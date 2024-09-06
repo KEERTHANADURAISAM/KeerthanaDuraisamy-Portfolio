@@ -1,26 +1,31 @@
-.navbar{
-    height: 100px;
-}
-.wrapper{
-    max-width: 1366px;
+@import "../../app.scss";
 
-    margin-top: 10px;
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-evenly;
     height: 100%;
-
-    span{
-        font-weight: bold;
-    }
-    .social{
-        display: flex;
-        gap:20px;
-
-        img{
-            width: 30px;
-            height:30px;
+    
+    @include mobile{
+        justify-content: flex-end;
+        padding: 20px;
         }
+    span {
+      font-weight: bold;
     }
-}
+    .social {
+      display: flex;
+      gap: 20px;
 
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
