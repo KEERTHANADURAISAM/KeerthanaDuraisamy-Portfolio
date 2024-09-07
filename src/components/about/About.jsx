@@ -33,7 +33,7 @@ const isInView = useInView(ref,{margin:"-100px"})
   return (
     <motion.div className='about' variants={variants} initial="initial" 
     ref={ref}
-animate={isInView && "animate"}
+animate={"animate"}
     // animate="animate"
     // whileInView="animate"
     >

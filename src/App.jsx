@@ -18,20 +18,20 @@ const App = () => {
         <Home />
       </section>
      
-       <section id="Services">
+      <section id="Services">
         <Parallax type="services" />
       </section>
       <section>
         <About />
       </section>
-      <section id="Portfolio">
+       <section id="Portfolio">
         <Parallax type="portfolio" />
-      </section> 
+      </section>  
       <Portfolio/> 
 
       <section id="Contact">
         <Contact />
-      </section> 
+      </section>   
     </div>
   );
 };

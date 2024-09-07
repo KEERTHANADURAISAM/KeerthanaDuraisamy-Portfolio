@@ -1,52 +1,84 @@
-.contact{
-    height: 100%;
-    max-width: 1366px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 90px;
-   .contactTextContainer{
+@import "../../app.scss";
+
+.contact {
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 90px;
+
+  @include mobile{
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    }
+
+  .contactTextContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    h1{
-        font-size: 90px;
-        line-height: 88px;
-    }
-    span{
-        font-weight: 300;
-    }
-   }
-   .formContainer{
+    @include mobile{
+      gap: 20px;
+      text-align: center;
+      margin-top: 70px;
+        }
 
-    flex:1;
-    position: relative;
-    .phoneSvg{
-       stroke: orange;
-        position: absolute;
-        margin: auto;
+    h1 {
+      font-size: 90px;
+      line-height: 88px;
+      @include mobile{
+      font-size: 36px;
+          }
     }
-    form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    input,textarea{
+    span {
+      font-weight: 300;
+    }
+  }
+  .formContainer {
+    flex: 1;
+    position: relative;
+background-color: rebeccapurple;
+    @include mobile{
+       padding: 50px;
+       width: 100%;
+          }
+
+    .phoneSvg {
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      input,
+      textarea {
         padding: 20px;
         background-color: transparent;
         border: 1px solid white;
         color: white;
         border-radius: 5px;
-    }
-    button{
+        @include mobile{
+         padding: 10px;
+         font-weight: 600;
+         font-size: 18px;
+              }
+      }
+      button {
         padding: 20px;
         border: none;
         background-color: orange;
         cursor: pointer;
         font-weight: 500;
+        @include mobile{
+           padding: 10px;
+              }
+      }
     }
-   }
-}
+  }
 }
