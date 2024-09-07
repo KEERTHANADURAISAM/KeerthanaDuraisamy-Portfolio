@@ -3,7 +3,7 @@ import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import PositionCursor from "./components/cursor/PositionCursor";
 import Home from "./components/home/Home";
-import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 

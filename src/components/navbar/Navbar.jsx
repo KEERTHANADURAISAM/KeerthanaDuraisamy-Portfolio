@@ -3,7 +3,6 @@ import github from "../navbar/img/branch.png";
 import gmail from "../navbar/img/gmail.png";
 import link from "../navbar/img/linkedin.png";
 import cv from "../navbar/img/cv.png";
-import resume from "../navbar/img/resume.png";
 import "../navbar/Navbar.scss";
 import { motion } from "framer-motion";
 import Sidebar from "../sidebar/Sidebar";
