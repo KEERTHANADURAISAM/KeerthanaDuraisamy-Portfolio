@@ -34,7 +34,7 @@ const Navbar = () => {
             <img src={link} alt="LinkedIn" />
           </a>
           <a
-            href="https://drive.google.com/file/d/1NzOogVzEhh8iFg57KmIEMNkx_Cr3_S4q/view?usp=drive_link"
+            href="#"
             target="_blank"
           >
             <img src={cv} alt="CV" />
