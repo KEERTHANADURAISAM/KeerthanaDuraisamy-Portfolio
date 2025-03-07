@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
 import '../portfolio/Portfolio.scss';
 import { useScroll, useSpring, motion, useTransform } from 'framer-motion';
+import img1 from '../portfolio/online-store.png'
 
 // Sample data for items
 const items = [
-  { id: 1, title: 'React Commerce', img: 'your-image-url', desc: 'Sample description' },
+  { id: 1, title: 'MERN Commerce', img:img1, desc: 'Sample description' },
   { id: 2, title: 'Vanilla Commerce', img: 'your-image-url', desc: 'Sample description' },
   { id: 3, title: 'MERN Commerce', img: 'your-image-url', desc: 'Sample description' },
   { id: 4, title: 'Next.js Commerce', img: 'your-image-url', desc: 'Sample description' },
@@ -21,7 +22,7 @@ const Single = ({ item }) => {
     // offset:["start start","end start"]
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 200]);
 
 
   return (
