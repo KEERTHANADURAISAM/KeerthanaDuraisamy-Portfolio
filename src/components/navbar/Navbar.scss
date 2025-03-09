@@ -15,8 +15,9 @@
         justify-content: flex-end;
         padding: 25px;
         }
-    span {
-      font-weight: bold;
+    img {
+    height:70px;
+    width: 70px;
       @include mobile{
         display: none;
       }

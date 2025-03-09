@@ -1,33 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Caveat:wght@700&family=Dancing+Script:wght@400;500&family=Foldit&family=League+Spartan:wght@500&family=Literata:wght@300;400&family=Noto+Serif+NP+Hmong:wght@500&family=Paytone+One&family=Poppins:ital,wght@1,300&family=Roboto:ital,wght@0,300;0,400;1,400&family=Sedgwick+Ave+Display&family=Slackey&display=swap');
 
-.skill-container {
+.skill-container{
+    height: auto;
     width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(180deg, #0c0c1d, #111132);
+    margin-top: 100px;
+    background: linear-gradient(180deg,#0c0c1d,#111132);
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.skill-header {
-    font-family: "Sedgwick Ave Display", cursive;
-    font-size: 50px;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    color: plum;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+.skill-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     width: 100%;
     max-width: 1200px;
-    justify-content: center;
-    padding: 20px;
 }
 
 .about-content {
@@ -40,59 +30,52 @@
 
 .about-content h1 {
     font-family: "Sedgwick Ave Display", cursive;
-    font-size: 40px;
+    font-size: 55px;
     color: #eecfaf;
     letter-spacing: 3px;
 }
 
 .about-text {
     font-family: "League Spartan", sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     color: rgb(221, 128, 144);
     padding: 20px;
     text-align: center;
 }
 
-.tech-icon-card, .tech-img-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 20px;
+.tech-icon-card{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
     padding: 20px;
 }
 
-.tech-icon, .tech-img {
-    height: 50px;
-    width: 50px;
+.tech-icon{
+    height: 35px;
+    width: 35px;
     transition: transform 0.3s ease-in-out;
 }
 
-.tech-icon:hover, .tech-img:hover {
+.tech-icon:hover{
     transform: scale(1.1);
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     .skill-header {
         font-size: 35px;
+        text-align: center;
     }
-
     .about-content h1 {
         font-size: 30px;
     }
-
     .about-text {
         font-size: 16px;
     }
-
-    .tech-icon-card, .tech-img-card {
-        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-        gap: 15px;
-    }
-
-    .tech-icon, .tech-img {
-        height: 40px;
-        width: 40px;
+    .tech-icon-card{
+        max-width: 100%;
     }
 }
 
@@ -100,22 +83,18 @@
     .skill-header {
         font-size: 28px;
     }
-
     .about-content h1 {
         font-size: 25px;
     }
-
     .about-text {
         font-size: 14px;
     }
-
-    .tech-icon-card, .tech-img-card {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+    .tech-icon-card{
+        justify-content: center;
+        gap: 15px;
     }
-
-    .tech-icon, .tech-img {
-        height: 35px;
-        width: 35px;
+    .tech-icon{
+        height: 30px;
+        width: 30px;
     }
 }

@@ -5,6 +5,7 @@ import link from "../navbar/img/linkedin.png";
 import cv from "../navbar/img/cv.png";
 import "../navbar/Navbar.scss";
 import { motion } from "framer-motion";
+import logo from '../navbar/img/logo-removebg-preview.png'
 import Sidebar from "../sidebar/Sidebar";
 
 const Navbar = () => {
@@ -14,13 +15,15 @@ const Navbar = () => {
         {/* <Sidebar />
          */}
         <div className="wrapper">
-        <motion.span
+        <motion.img
+          src={logo} // Replace with your image URL or path
+  alt="Animated Image"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Keerthana Duraisamy
-        </motion.span>
+          
+        </motion.img>
         <div className="social">
           <a href="https://github.com/KEERTHANADURAISAM" target="_blank">
             <img src={github} alt="Github" />

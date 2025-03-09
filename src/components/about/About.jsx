@@ -5,7 +5,7 @@ import html from './file.png';
 import css from './css (2).png';
 import boot from './letter-b (1).png';
 import js from './javascript.png';
-import react from './react.png';
+import react from './letter-r.png';
 import post from './parking-area.png';
 import mongodb from './database (1).png';
 import node from './letter-n.png';
@@ -32,12 +32,7 @@ const About = ({ pageRefs }) => {
         </div>
         <div className="about-text">
           <h3>
-            Hi, I'm a Qualified Full Stack Developer familiar with a wide
-            range of programming utilities and languages. Knowledgeable of
-            backend and frontend development requirements with database
-            management. Handles any part of the process with ease. Collaborative
-            team player with a willingness to learn in and grow with the
-            organization.
+          In my first four months as a MERN stack developer, I've gained valuable hands-on experience working with MongoDB, Express.js, React, and Node.js. I've actively contributed to the development of web applications, learning to implement efficient and scalable solutions. During this time, I've tackled real-world challenges, honed my coding skills, and collaborated within a team environment. My experience reflects a commitment to continuous learning and a proactive approach to problem-solving. Eager to take on more complex projects and further expand my expertise in the dynamic field of full-stack development.
           </h3>
         </div>
                </motion.div>
