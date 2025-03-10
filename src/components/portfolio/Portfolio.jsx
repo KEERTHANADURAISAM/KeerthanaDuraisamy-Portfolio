@@ -1,14 +1,18 @@
 import React, { useRef } from 'react';
 import '../portfolio/Portfolio.scss';
 import { useScroll, useSpring, motion, useTransform } from 'framer-motion';
-import img1 from '../portfolio/online-store.png'
+import img1 from '../portfolio/black-friday.png'
+import img2 from '../portfolio/financial-planning.png'
+import img3 from '../portfolio/online-store.png'
+import img4 from '../portfolio/online-store.png'
+
 
 // Sample data for items
 const items = [
-  { id: 1, title: 'MERN Commerce', img:img1, desc: 'Sample description' },
-  { id: 2, title: 'Vanilla Commerce', img: 'your-image-url', desc: 'Sample description' },
-  { id: 3, title: 'MERN Commerce', img: 'your-image-url', desc: 'Sample description' },
-  { id: 4, title: 'Next.js Commerce', img: 'your-image-url', desc: 'Sample description' },
+  { id: 1, title: 'MERN Commerce', img:img1, desc: 'Explore the store and shop with ease! ',link:'' },
+  { id: 2, title: 'Money Manager', img: 'your-image-url', desc: 'Manage your money effortlessly and take charge of your finances!',link:'' },
+  { id: 3, title: 'Social Media App', img: 'your-image-url', desc: 'Stay connected with friends, discover new content, and engage in meaningful conversations!',link:'' },
+  { id: 4, title: 'Zen Portal', img: 'your-image-url', desc: 'Bridge the gap between students and teachers with instant query resolution!',link:'https://elegant-beijinho-0a563b.netlify.app/' },
 ];
 
 

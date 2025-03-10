@@ -3,7 +3,7 @@ import '../contact/Contact.scss';
 import { motion, useInView } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import msg from '../contact/paper-plane.gif'
-
+import toast, { Toaster } from "react-hot-toast";
 
 
 const variants = {
@@ -22,29 +22,66 @@ const variants = {
 };
 
 const Contact = () => {
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Your EmailJS service ID, template ID, and Public Key
+    const serviceId = "service_08xamoh";
+    const templateId = "template_dihgyrv";
+    const publicKey = "Cy4bJnADDYybIP7QK";
+
+    // Create a new object that contains dynamic template params
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "Portfolio Mail",
+      message: message,
+    };
+
+    // Send the email using EmailJS
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully!", response);
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+  };
+  const notify = (name, email, message) => {
+    if (name && message && email !== "") {
+      toast.success("Message Send Successfully");
+    }
+  };
 
   const ref = useRef();
   const formref = useRef();
   const isInView = useInView(ref, { rootMargin: '0px 0px -10px 0px' });
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm('service_ge6rmtt', 'template_v0yfjjc', formref.current, {
-        publicKey: 'da640-A6BC8T790z-',
-      })
-      .then(
-        (result) => {
-          setSuccess(true);
-        },
-        (error) => {
-          setError(true);
-        }
-      );
-  };
+  //   emailjs
+  //     .sendForm('service_ge6rmtt', 'template_v0yfjjc', formref.current, {
+  //       publicKey: 'da640-A6BC8T790z-',
+  //     })
+  //     .then(
+  //       (result) => {
+  //         setSuccess(true);
+  //       },
+  //       (error) => {
+  //         setError(true);
+  //       }
+  //     );
+  // };
 
   return (
     <motion.div
@@ -76,7 +113,7 @@ const Contact = () => {
         
         <motion.form
           ref={formref}
-          onSubmit={sendEmail}
+          onSubmit={handleSubmit}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
@@ -85,8 +122,7 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email" />
           <textarea rows={8} placeholder="Message" name="message"></textarea>
           <button type="submit">Submit</button>
-          {error && 'Error'}
-          {success && 'Success'}
+         <Toaster/>
         </motion.form>
       </div>
     </motion.div>
