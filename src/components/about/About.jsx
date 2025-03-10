@@ -45,7 +45,7 @@ const About = ({ pageRefs }) => {
                     {[{img: html, name: 'HTML'}, {img: css, name: 'CSS'}, {img: boot, name: 'BOOTSTRAP'}, {img: js, name: 'JAVASCRIPT'}, {img: react, name: 'REACT'}, {img: mongodb, name: 'MONGO DB'}, {img: node, name: 'NODE'}, {img: express, name: 'EXPRESS'}, {img: github, name: 'GITHUB'}, {img: git, name: 'GIT'}, {img: netlifY, name: 'NETLIFY'}, {img: post, name: 'POSTMAN'}].map((tech, index) => (
                         <div className='tech-icon-div' key={index}>
                             <img src={tech.img} className='tech-icon' alt={tech.name}/>
-                            <span className='tech-span'>{tech.name}</span>
+                            {/* <span className='tech-span'>{tech.name}</span> */}
                         </div>
                     ))}
                 </motion.div>
