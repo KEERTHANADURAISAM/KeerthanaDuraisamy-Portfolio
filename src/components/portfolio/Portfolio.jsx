@@ -1,18 +1,18 @@
 import React, { useRef } from 'react';
 import '../portfolio/Portfolio.scss';
 import { useScroll, useSpring, motion, useTransform } from 'framer-motion';
-import img1 from '../portfolio/black-friday.png'
+import img1 from '../portfolio/online-shop.png'
 import img2 from '../portfolio/financial-planning.png'
-import img3 from '../portfolio/online-store.png'
-import img4 from '../portfolio/online-store.png'
+import img3 from '../portfolio/chat.png'
+import img4 from '../portfolio/solved.png'
 
 
 // Sample data for items
 const items = [
-  { id: 1, title: 'MERN Commerce', img:img1, desc: 'Explore the store and shop with ease! ',link:'' },
-  { id: 2, title: 'Money Manager', img: 'your-image-url', desc: 'Manage your money effortlessly and take charge of your finances!',link:'' },
-  { id: 3, title: 'Social Media App', img: 'your-image-url', desc: 'Stay connected with friends, discover new content, and engage in meaningful conversations!',link:'' },
-  { id: 4, title: 'Zen Portal', img: 'your-image-url', desc: 'Bridge the gap between students and teachers with instant query resolution!',link:'https://elegant-beijinho-0a563b.netlify.app/' },
+  { id: 1, title: 'MERN Commerce', img:img1, desc: 'Explore the store and shop with ease! ',link:'https://ecommerece-app-cnk6.vercel.app/' },
+  { id: 2, title: 'Money Manager', img:img2, desc: 'Manage your money effortlessly and take charge of your finances!',link:'https://money-manager-app-client.vercel.app/' },
+  { id: 3, title: 'Social Media App', img: img3, desc: 'Stay connected with friends, discover new content, and engage in meaningful conversations!',link:'https://social-media-app-client-eta.vercel.app/auth' },
+  { id: 4, title: 'Zen Portal', img:img4, desc: 'Bridge the gap between students and teachers with instant query resolution!',link:'https://elegant-beijinho-0a563b.netlify.app/' },
 ];
 
 
@@ -39,7 +39,16 @@ const Single = ({ item }) => {
           <motion.div className="textContainerItem" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            {item.link ? (
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <button>See Demo</button>
+              </a>
+            ) : (
+              <button disabled style={{ opacity: 0.5, cursor: "not-allowed" }}>
+                Demo Not Available
+              </button>
+            )}
+            
           </motion.div>
         </div>
       </div>
