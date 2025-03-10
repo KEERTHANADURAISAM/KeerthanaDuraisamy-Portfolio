@@ -30,11 +30,15 @@
 }
 
 .about-content h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Sedgwick Ave Display", cursive;
     font-size: 55px;
     color: #eecfaf;
     letter-spacing: 3px;
     margin-top: 10px;
+    margin-left: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +49,7 @@
     font-size: 20px;
     color: rgb(221, 128, 144);
     padding: 20px;
-    text-align: center;
+    text-align: justify;
 }
 
 .tech-icon-card{

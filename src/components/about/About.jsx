@@ -35,7 +35,9 @@ const About = ({ pageRefs }) => {
           In my first four months as a MERN stack developer, I've gained valuable hands-on experience working with MongoDB, Express.js, React, and Node.js. I've actively contributed to the development of web applications, learning to implement efficient and scalable solutions. During this time, I've tackled real-world challenges, honed my coding skills, and collaborated within a team environment. My experience reflects a commitment to continuous learning and a proactive approach to problem-solving. Eager to take on more complex projects and further expand my expertise in the dynamic field of full-stack development.
           </h3>
         </div>
+       
                </motion.div>
+               </div>
                 <motion.div
                     variants={variants}
                     initial="hidden"
@@ -50,7 +52,6 @@ const About = ({ pageRefs }) => {
                     ))}
                 </motion.div>
             </div>
-        </div>
     );
 };
 
