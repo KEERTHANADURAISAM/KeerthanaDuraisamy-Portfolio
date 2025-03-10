@@ -61,10 +61,10 @@ overflow: hidden;
           height:20rem;
           width: 20rem;
             object-fit: cover;
-
+margin-left: 9rem;
             @include mobile{
               object-fit: cover;
-            
+              margin-left:0;
           }
 
         }
